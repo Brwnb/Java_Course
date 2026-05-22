@@ -16,9 +16,10 @@ public class Exercicio191 {
     public static void main(String args[]) {
 
         /**
-         * outro geito de fazer vetor com valores fixos
+         * outro jeito de fazer vetor com valores fixos
          *
-         * int[] vector = new int[5]; vector = new int[]{5, 4, 10, 41, 2};
+         * int[] vector = new int[5]; 
+         * vector = new int[]{5, 4, 10, 41, 2};
          */
         int[] vector = {5, 4, 10, 22, 2};
         int[] clone = new int[vector.length];

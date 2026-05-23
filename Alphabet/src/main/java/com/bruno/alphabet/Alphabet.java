@@ -1,12 +1,21 @@
 
 package com.bruno.alphabet;
 
+/*
+ * This code is to practice a way to write the alphabet
+ * using ansii insted to type all the letters on array
+ *
+ * I have done this on the collage, and I need to search
+ * Because I didn't remeberer. It was a long, long time
+ * go. 
+ */
 
-public class Alfabetic {
+public class Alphabet {
 
-    @SuppressWarnings("empty-statement")
+   
     public static void main(String[] args) {
 
+        // One way to generate the alphabet
         /*
         int count=0;
         char[] alphabet = new char[26];
@@ -18,6 +27,8 @@ public class Alfabetic {
             System.out.print(alphabet[i] + " ");
         }
          */
+        
+        // A second way to generate the alphabet
         char[] alphabet = new char[26];
         for (int i = 0; i < 26; i++) {
             alphabet[i] = (char) ('a' + i);
@@ -27,6 +38,7 @@ public class Alfabetic {
             System.out.print( letter + " ");
             
         }
-        System.out.print((char) 'a' - 32);
+        // There is a lot of ways to generate an alphabet
+        //System.out.print((char) 'a' - 32);
     }
 }

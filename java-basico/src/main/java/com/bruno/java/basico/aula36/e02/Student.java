@@ -9,7 +9,7 @@ package com.bruno.java.basico.aula36.e02;
 public class Student {
     private String name;
     private String registration;
-    private String[] grade;
+    private String[] grades;
 
     public String getName() {
         return name;
@@ -19,8 +19,8 @@ public class Student {
         return registration;
     }
 
-    public String[] getGrade() {
-        return grade;
+    public String[] getGrades() {
+        return grades;
     }
 
     public void setName(String name) {
@@ -31,8 +31,8 @@ public class Student {
         this.registration = registration;
     }
 
-    public void setGrade(String[] grade) {
-        this.grade = grade;
+    public void setGrades(String[] grades) {
+        this.grades = grades;
     }
 
   

@@ -7,23 +7,22 @@ package com.bruno.java.basico.aula36.e01;
 
 
 public class Agenda {
-    private Contato contato;
+    private Contato[] contatos;
     private String name;
 
-    public Contato getContato() {
-        return contato;
+    public Contato[] getContatos() {
+        return contatos;
     }
 
     public String getName() {
         return name;
     }
 
-    public void setContato(Contato contato) {
-        this.contato = contato;
+    public void setContatos(Contato[] contatos) {
+        this.contatos = contatos;
     }
 
     public void setName(String name) {
         this.name = name;
     }
-    
 }

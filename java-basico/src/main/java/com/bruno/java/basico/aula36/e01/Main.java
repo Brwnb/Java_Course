@@ -8,7 +8,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * 
+ *
  */
 public class Main {
 
@@ -16,25 +16,30 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-        
-        
-        
-        
-        
+
         Agenda primeira = new Agenda();
         primeira.setName(JOptionPane.showInputDialog("Type the name of agenda: "));
-        
-        Contato contato = new Contato();
-        contato.setName(JOptionPane.showInputDialog("Type the Name of Contact: "));
-        contato.setPhoneNumber(JOptionPane.showInputDialog("Type the Phone Number of: "));
-        contato.setEmail(JOptionPane.showInputDialog("Type the E-mail: "));
-        
-        primeira.setContato(contato);
-        
-        JOptionPane.showMessageDialog(null, "The Name of Agenda: " + primeira.getName()
-                + "\n" + "The contact name: " + primeira.getContato().getName()
-                + "\n" + "The Phone number of contact: " + primeira.getContato().getPhoneNumber()
-                + "\n" + "The email of contact: " + primeira.getContato().getEmail()
-         );
+
+        Contato[] contato = new Contato[3];
+        for (int i = 0; i < contato.length; i++) {
+            Contato c = new Contato();
+
+            c.setName(JOptionPane.showInputDialog("Type the Name of Contact: "));
+            c.setPhoneNumber(JOptionPane.showInputDialog("Type the Phone Number of: "));
+            c.setEmail(JOptionPane.showInputDialog("Type the E-mail: "));
+            contato[i] = c;
+        }
+
+        primeira.setContatos(contato);
+
+        JOptionPane.showMessageDialog(null, "The Name of Agenda: " + primeira.getName());
+
+        for (int i = 0; i < primeira.getContatos().length; i++) {
+            Contato c = primeira.getContatos()[i];
+            JOptionPane.showMessageDialog(null, "The Name of Agenda: " + c.getName()
+                    + "\n" + "The contact name: " + c.getEmail()
+                    + "\n" + "The Phone number of contact: " + c.getPhoneNumber());
+
+        }
     }
 }

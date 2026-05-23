@@ -5,7 +5,9 @@
 
 package com.bruno.java.basico.aula36;
 
-
+/*
+* Relation between classes one-to-one
+*/
 public class Address {
     private String streetName;
     private String houseNumber;

@@ -5,12 +5,25 @@
 
 package com.bruno.java.basico.aula36;
 
-
+/*
+* We are useing array to work with many phone number insted of colletions just
+* because we don't see colletions yet.
+*/
 public class Contact {
+   
     private String name;
     private Address address;
-    private String phoneNumber;
+   // private PhoneNumber phoneNumber; // before, when the class was one-to-one
+    private PhoneNumber[] phoneNumbers;
 
+    public void setPhoneNumbers(PhoneNumber[] phoneNumbers) {
+        this.phoneNumbers = phoneNumbers;
+    }
+    
+    public PhoneNumber[] getPhoneNumbers() {
+        return phoneNumbers;
+    }
+    
     public String getName() {
         return name;
     }
@@ -19,9 +32,10 @@ public class Contact {
         return address;
     }
 
-    public String getPhoneNumber() {
+    /*
+    public PhoneNumber getPhoneNumber() { // before, when the class was one-to-one
         return phoneNumber;
-    }
+    }*/
 
     public void setName(String name) {
         this.name = name;
@@ -31,10 +45,9 @@ public class Contact {
         this.address = address;
     }
 
-    public void setPhoneNumber(String phoneNumber) {
+   /*
+    public void setPhoneNumber(PhoneNumber phoneNumber) { // before, when the class was one-to-one
         this.phoneNumber = phoneNumber;
     }
-
-     
- 
+    */
 }

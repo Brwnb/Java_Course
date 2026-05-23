@@ -5,21 +5,18 @@
 
 package com.bruno.java.basico.aula36.e02;
 
-import java.util.Date;
+import java.time.LocalTime;
+
 
 
 public class Course {
     private String name;
-    private Date hour;
+    private LocalTime hour;
     private Professor professor;
     private Student student;
 
     public String getName() {
         return name;
-    }
-
-    public Date getHour() {
-        return hour;
     }
 
     public Professor getProfessor() {
@@ -34,16 +31,20 @@ public class Course {
         this.name = name;
     }
 
-    public void setHour(Date hour) {
-        this.hour = hour;
-    }
-
     public void setProfessor(Professor professor) {
         this.professor = professor;
     }
 
     public void setStudent(Student student) {
         this.student = student;
+    }
+
+    public LocalTime getHour() {
+        return hour;
+    }
+
+    public void setHour(LocalTime hour) {
+        this.hour = hour;
     }
     
 }

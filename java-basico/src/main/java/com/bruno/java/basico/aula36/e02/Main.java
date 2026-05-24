@@ -35,7 +35,7 @@ public class Main {
         }
 
         student1.setGrades(grades);
-        course.setStudent(student1);
+        course.setStudents(student1);
      
         JOptionPane.showMessageDialog(null,
                 "Course Name: " + course.getName()

@@ -13,7 +13,7 @@ public class Course {
     private String name;
     private LocalTime hour;
     private Professor professor;
-    private Student student;
+    private Student[] students;
 
     public String getName() {
         return name;
@@ -23,8 +23,8 @@ public class Course {
         return professor;
     }
 
-    public Student getStudent() {
-        return student;
+    public Student[] getStudent() {
+        return students;
     }
 
     public void setName(String name) {
@@ -35,8 +35,8 @@ public class Course {
         this.professor = professor;
     }
 
-    public void setStudent(Student student) {
-        this.student = student;
+    public void setStudents(Student[] student) {
+        this.students = student;
     }
 
     public LocalTime getHour() {

@@ -35,6 +35,4 @@ class Contato {
         this.email = email;
     }
     
-    
-    
 }

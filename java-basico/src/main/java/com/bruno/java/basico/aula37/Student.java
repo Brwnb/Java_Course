@@ -4,7 +4,7 @@
  */
 package com.bruno.java.basico.aula37;
 
-public class Student {
+public class Student extends People {
   
     private String[] courses;
     private String[][] grade;

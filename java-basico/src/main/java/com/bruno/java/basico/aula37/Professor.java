@@ -4,7 +4,7 @@
  */
 package com.bruno.java.basico.aula37;
 
-public class Professor {
+public class Professor extends People {
 
     
     private String department;

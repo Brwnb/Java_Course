@@ -9,7 +9,7 @@ package com.bruno.java.basico.aula36.e02;
 public class Student {
     private String name;
     private String registration;
-    private String[] grades;
+    private Double[] grades;
 
     public String getName() {
         return name;
@@ -19,7 +19,7 @@ public class Student {
         return registration;
     }
 
-    public String[] getGrades() {
+    public Double[] getGrades() {
         return grades;
     }
 
@@ -31,9 +31,25 @@ public class Student {
         this.registration = registration;
     }
 
-    public void setGrades(String[] grades) {
+    public void setGrades(Double[] grades) {
         this.grades = grades;
     }
 
+    public double average(){
+        double sum = 0;
+        for (double grade : this.grades){
+            sum += grade;
+        }
+        return sum/4;
+    }
+    
+    public String validation(double value){
+        if (value >= 7.0){
+            return "Approved";
+        }
+        else{
+            return "Reproved";
+        }
+    }
   
 }

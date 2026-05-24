@@ -24,30 +24,48 @@ public class Main {
         professor.setEmail(JOptionPane.showInputDialog("Professor's email: "));
 
         course.setProfessor(professor);
-
-        Student student1 = new Student();
-        student1.setName(JOptionPane.showInputDialog("Student's Name: "));
-        student1.setRegistration(JOptionPane.showInputDialog("Registration code: "));
-
-        String[] grades = new String[5] ;
-        for (int i = 0; i < grades.length; i++) {
-            grades[i] = JOptionPane.showInputDialog("Student's grade: ");
+        
+        Double[] grade = new Double[4];
+        Student[] student = new Student[3];
+        for (int i=0;i<student.length;i++){
+            Student s = new Student();
+            s.setName(JOptionPane.showInputDialog("Student's Name: "));
+            s.setRegistration(JOptionPane.showInputDialog("Registration code: "));
+            
+            for (int j=0;j<4;j++){
+                grade[j] = Double.valueOf(JOptionPane.showInputDialog("Student " + s.getName() + "'s grade: "));
+            }
+            s.setGrades(grade);
+            student[i]= s;
+            course.setStudents(student);
         }
+        
 
-        student1.setGrades(grades);
-        course.setStudents(student1);
-     
+        
         JOptionPane.showMessageDialog(null,
                 "Course Name: " + course.getName()
                 + "\n" + "Hour: " + course.getHour()
-                + "\n" + "Country: " + course.getProfessor().getName()
-                + "\n" + "Country: " + course.getProfessor().getDepartment()
-                + "\n" + "Phones: " + course.getStudent().getName()
-                + "\n" + "Phones: " + course.getStudent().getRegistration());
-                
-        for(String s : course.getStudent().getGrades()){
-            JOptionPane.showMessageDialog(null, "Grades: " + s);
-        }
+                + "\n" + "Professor's name: " + course.getProfessor().getName()
+                + "\n" + "Professor's Department: " + course.getProfessor().getDepartment());
         
+        double average_class = 0;
+        for(int i=0;i<course.getStudent().length;i++){
+            Student s = course.getStudent()[i];
+            average_class += s.average();
+            JOptionPane.showMessageDialog(null, "Student's Name: " + s.getName()
+                    + "\n" + "Registration code: " + s.getRegistration()
+                    + "\n" + "Grade: " 
+                    + "\n" + "Exam 1: " + s.getGrades()[0]
+                    + "\n" + "Exam 2: " + s.getGrades()[1]
+                    + "\n" + "Exam 3: " + s.getGrades()[2]
+                    + "\n" + "Exam 4: " + s.getGrades()[3]
+                    + "\n" + "Average: " + s.average()
+                    + "\n" + "Average: " + s.validation(s.average())
+                    
+            );
+            
+        }
+        JOptionPane.showMessageDialog(null, "Average of the Class" + average_class/3);
+      
     }
 }

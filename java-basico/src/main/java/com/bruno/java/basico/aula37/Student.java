@@ -9,6 +9,20 @@ public class Student extends People {
     private String[] courses;
     private String[][] grade;
 
+    public Student() {
+        super();
+    }
+
+    public Student(String name, String address, String phone) {
+        super(name, address, phone);
+    }
+
+    public Student(String[] courses, String name, String address, String phone) {
+        super(name, address, phone);
+        this.courses = courses;
+    }
+
+    
     public String[] getCourses() {
         return courses;
     }
@@ -31,6 +45,13 @@ public class Student extends People {
     }
     public double checkApproved (){
         return 5;
+    }
+    public void randomMetod(){
+        //Duas formas diferentes de acessoar os métodos e atributos da classe pai
+        super.setId("123456");
+        this.setId("123456");
+        super.newMetod();
+        this.newMetod();
     }
     
 }

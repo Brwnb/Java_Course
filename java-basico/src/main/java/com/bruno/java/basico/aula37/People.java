@@ -12,6 +12,15 @@ public class People {
     private String phone;
     private String id;
 
+    public People(String name, String address, String phone) {
+        super();
+        this.name = name;
+        this.address = address;
+        this.phone = phone;
+    }
+
+    public People() {}
+        
     public String getName() {
         return name;
     }
@@ -43,5 +52,7 @@ public class People {
     public void setId(String id) {
         this.id = id;
     }
-    
+    public void newMetod(){
+        System.out.print("test");
+    }
 }

@@ -6,7 +6,6 @@ package com.bruno.java.basico.aula37;
 
 public class Professor extends People {
 
-    
     private String department;
     private String[] courses;
     private double salary;
@@ -22,7 +21,7 @@ public class Professor extends People {
     public double getSalary() {
         return salary;
     }
-    
+
     public void setDepartment(String department) {
         this.department = department;
     }
@@ -34,8 +33,15 @@ public class Professor extends People {
     public void setSalary(double salary) {
         this.salary = salary;
     }
-    
-    public double CalcSalaryliquid(){
+
+    public double CalcSalaryliquid() {
         return 5;
+    }
+
+    @Override
+    public String pickUpLabel() {
+        String s = "Professor's Address: ";
+        s += super.getAddress();
+        return s;
     }
 }

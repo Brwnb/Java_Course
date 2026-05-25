@@ -55,4 +55,8 @@ public class People {
     public void newMetod(){
         System.out.print("test");
     }
+    
+    public String pickUpLabel(){
+        return address;
+    }
 }

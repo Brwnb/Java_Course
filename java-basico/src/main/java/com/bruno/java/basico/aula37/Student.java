@@ -53,5 +53,10 @@ public class Student extends People {
         super.newMetod();
         this.newMetod();
     }
+     public String pickUpLabel(){
+        String s = "Student's Address: ";
+        s += super.getAddress();
+        return s;
+    }
     
 }

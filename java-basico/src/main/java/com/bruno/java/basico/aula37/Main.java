@@ -50,6 +50,8 @@ public class Main {
         System.out.println(student.pickUpLabel()); 
         System.out.println(professor.pickUpLabel()); 
         
+        System.out.println(Constant.URL_SERIE);
+        System.out.println(Constant.URL_BLOG);
 
     }
 

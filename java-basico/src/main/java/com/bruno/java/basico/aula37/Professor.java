@@ -44,4 +44,5 @@ public class Professor extends People {
         s += super.getAddress();
         return s;
     }
+  //  String A= "ABC" + 3.45;
 }

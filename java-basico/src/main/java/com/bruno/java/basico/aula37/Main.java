@@ -10,7 +10,11 @@ package com.bruno.java.basico.aula37;
 *
 * Polimorfismo em tempo de compilação aula 33 (sobrecarga de métodos / overload)
 * Polimorfismo em tempo de execução aula 40
- */
+*
+*  Classe é a classe pai de todas as classes java.
+* toString
+* equals
+*/
 public class Main {
 
     public static void main(String[] args) {
@@ -37,6 +41,7 @@ public class Main {
         People professor = new Professor();
         professor.setName("Julius");
          */
+ /*
         People people = new People();
         People student = new Student();
         People professor = new Professor();
@@ -52,6 +57,18 @@ public class Main {
         
         System.out.println(Constant.URL_SERIE);
         System.out.println(Constant.URL_BLOG);
+        */
+        
+        Student s = new Student();
+        s.setCourses("Computer Cience");
+        double[] notas = {5, 6, 7};
+        s.setGrade(notas);
+        
+        System.out.println(s);
+        
+        String s1 = "123456";
+        String s2 = "1234566";
+        System.out.println(s1.equals(s2));
 
     }
 

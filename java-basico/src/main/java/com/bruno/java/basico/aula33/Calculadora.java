@@ -7,7 +7,7 @@ package com.bruno.java.basico.aula33;
 /**
  *
  * Sobrecarga de metodos
- * ou polimorfismo em tempo de compilação
+ * ou polimorfismo em tempo de compilação (overload)
  */
 public class Calculadora {
     

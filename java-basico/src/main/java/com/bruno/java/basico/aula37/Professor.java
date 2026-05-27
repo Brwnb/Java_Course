@@ -4,31 +4,11 @@
  */
 package com.bruno.java.basico.aula37;
 
-public class Professor {
+public class Professor extends People {
 
-    private String name;
-    private String address;
-    private String phone;
-    private String id;
     private String department;
     private String[] courses;
     private double salary;
-
-    public String getName() {
-        return name;
-    }
-
-    public String getAddress() {
-        return address;
-    }
-
-    public String getPhone() {
-        return phone;
-    }
-
-    public String getId() {
-        return id;
-    }
 
     public String getDepartment() {
         return department;
@@ -42,22 +22,6 @@ public class Professor {
         return salary;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
-    public void setPhone(String phone) {
-        this.phone = phone;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
-
     public void setDepartment(String department) {
         this.department = department;
     }
@@ -69,8 +33,16 @@ public class Professor {
     public void setSalary(double salary) {
         this.salary = salary;
     }
-    
-    public double CalcSalaryliquid(){
+
+    public double CalcSalaryliquid() {
         return 5;
     }
+
+    @Override
+    public String pickUpLabel() {
+        String s = "Professor's Address: ";
+        s += super.getAddress();
+        return s;
+    }
+  //  String A= "ABC" + 3.45;
 }

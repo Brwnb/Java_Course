@@ -16,13 +16,10 @@ public class ContaBancaria {
 
     }
 
-    public String depositar(double value) {
+    public void depositar(double value) {
 
         if (value > 0) {
             this.saldo = this.saldo + value;
-            return "Depósito com sucesso";
-        } else {
-            return "valor inválido";
         }
     }
 

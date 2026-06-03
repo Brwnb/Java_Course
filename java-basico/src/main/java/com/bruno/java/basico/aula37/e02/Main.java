@@ -1,36 +1,53 @@
 
 package com.bruno.java.basico.aula37.e02;
 
-
+// Exercicio Corrigido
 public class Main {
 
-    /**
-     * @param args the command line arguments
-     */
+   
     public static void main(String args[]) {
       
-        /*Contribuite pessoa = new Contribuite();
-       
-       pessoa.setNome("Bruno");
-       pessoa.setCpfCNPJ("0555555555");
-       pessoa.setRendaBruta(2570.55);
-       pessoa.validaAliquota();
-       System.out.println(pessoa.toString());
-       pessoa.validaDeducao();
-       System.out.println(pessoa.toString());
-       System.out.println(pessoa.calculaImposto());
-       */
-       
-       PessoaJuridica empresa = new PessoaJuridica();
-       empresa.setNome("Julius empreendimentos");
-       System.out.println(empresa.toString());
-       empresa.setCpfCNPJ("989878787-1221");
-       System.out.println(empresa.toString());
-       empresa.setAliquota(10);
-       System.out.println(empresa.toString());
-       empresa.setRendaBruta(25000);
-       System.out.println(empresa.toString());
-       System.out.println(empresa.calculaImposto());
+       PessoaFisica p1 = new PessoaFisica();
+        p1.setNome("Contribuinte 01");
+        p1.setRendaBruta(1000);
+        p1.setCpf("583.358.456-62");
+        
+        PessoaJuridica p2 = new PessoaJuridica();
+        p2.setNome("Contribuinte 02");
+        p2.setRendaBruta(5000);
+        p2.setCNPJ("91.403.512/0001-54");
+        
+        PessoaFisica p3 = new PessoaFisica();
+        p3.setNome("Contribuinte 03");
+        p3.setRendaBruta(2000);
+        p3.setCpf("828.277.078-70");
+        
+        PessoaJuridica p4 = new PessoaJuridica();
+        p4.setNome("Contribuinte 04");
+        p4.setRendaBruta(3000);
+        p4.setCNPJ("35.434.693/0001-05");
+        
+        PessoaFisica p5 = new PessoaFisica();
+        p5.setNome("Contribuinte 05");
+        p5.setRendaBruta(3700);
+        p5.setCpf("547.653.548-90");
+        
+        PessoaJuridica p6 = new PessoaJuridica();
+        p6.setNome("Contribuinte 06");
+        p6.setRendaBruta(4000);
+        p6.setCNPJ("10.684.822/0001-92");
+        
+        Contribuinte[] contribuintes = new Contribuinte[6];
+        contribuintes[0] = p1;
+        contribuintes[1] = p2;
+        contribuintes[2] = p3;
+        contribuintes[3] = p4;
+        contribuintes[4] = p5;
+        contribuintes[5] = p6;
+        
+        for (Contribuinte c : contribuintes){
+            System.out.println(c.toString());
+        }
        
     }
 }

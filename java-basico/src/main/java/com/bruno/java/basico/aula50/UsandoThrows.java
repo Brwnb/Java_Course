@@ -9,6 +9,7 @@ public class UsandoThrows {
         try { 
             double num = lerNumero();
             System.out.println("Digitou: " + num);
+            // throw new MinhasExceptions(num); -> chama minha classe 
         }
         catch(Exception e){
             System.out.println("Entrada Inválida");
@@ -24,3 +25,4 @@ public class UsandoThrows {
         return num;
     }
 }
+
